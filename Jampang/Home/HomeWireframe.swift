@@ -30,4 +30,9 @@ final class HomeWireframe: BaseWireframe<HomeViewController> {
 // MARK: - Extensions -
 
 extension HomeWireframe: HomeWireframeInterface {
+    
+    func navigateToRecommendation() {
+        // TODO: Open recommendation screen
+        print(storyboard)
+    }
 }
