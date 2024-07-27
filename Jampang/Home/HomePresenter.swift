@@ -28,6 +28,6 @@ final class HomePresenter {
 
 extension HomePresenter: HomePresenterInterface {
     func recommend(sale: String, location: String, time: String) {
-        wireframe
+        wireframe.navigateToRecommendation()
     }
 }

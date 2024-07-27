@@ -32,7 +32,8 @@ final class HomeWireframe: BaseWireframe<HomeViewController> {
 extension HomeWireframe: HomeWireframeInterface {
     
     func navigateToRecommendation() {
-        // TODO: Open recommendation screen
-        print(storyboard)
+        let rw = RoutesWireframe()
+        rw.viewController.modalPresentationStyle = .fullScreen
+        self.viewController.present(rw.viewController, animated: true)
     }
 }
