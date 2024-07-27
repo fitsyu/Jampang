@@ -78,6 +78,30 @@ final class HomeViewController: UIViewController {
             $0?.layer.borderWidth = 0
         }
     }
+    
+    @IBAction func recommendationButtonTap() {
+        
+        let chosen = [opt1, opt2, opt3].first(where: { $0?.layer.borderWidth == 2 }) ?? opt1
+        guard let choice = chosen else { return }
+        
+        let sale = switch choice {
+        case opt1:
+            "Bakso"
+        case opt2:
+            "Burger"
+        case opt3:
+            "Ayam"
+        default:
+            "Bakso"
+        }
+        
+        
+        presenter.recommend(
+            sale: sale,
+            location: stationTextField.text!,
+            time: timeTextField.text!
+        )
+    }
 }
 
 extension HomeViewController: UITextFieldDelegate {

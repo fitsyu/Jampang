@@ -10,10 +10,12 @@
 import UIKit
 
 protocol HomeWireframeInterface: WireframeInterface {
+    func navigateToRecommendation()
 }
 
 protocol HomeViewInterface: ViewInterface {
 }
 
 protocol HomePresenterInterface: PresenterInterface {
+    func recommend(sale: String, location: String, time: String)
 }
