@@ -28,33 +28,7 @@ final class RoutesViewController: UIViewController {
         tableView.rowHeight = 104 + 16
         tableView.dataSource = self
         
-        tableView.isHidden = true
-        showLoading()
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        
-        Timer.scheduledTimer(withTimeInterval: 1, repeats: false, block: { [weak self] _ in
-            self?.hideLoading()
-            self?.tableView.isHidden = false
-        })
-    }
-    
-    private func showLoading() {
-        let lottieView = LottieAnimationView(name: "loading")
-        lottieView.contentMode = .scaleAspectFit
-        lottieView.loopMode = .loop
-        lottieView.frame = lottieHolderView.bounds
-        lottieView.play()
-        
-        self.lottieHolderView.addSubview(lottieView)
-        self.lottieHolderView.isHidden = false
-    }
-    
-    private func hideLoading() {
-        self.lottieHolderView.subviews.first?.removeFromSuperview()
-        self.lottieHolderView.isHidden = true
+        presenter.viewDidLoad()
     }
     
     @IBAction func backButtonTap() {
@@ -82,6 +56,25 @@ extension RoutesViewController: UITableViewDataSource {
 // MARK: - Extensions -
 
 extension RoutesViewController: RoutesViewInterface {
+    func showLoading() {
+        tableView.isHidden = true
+        
+        let lottieView = LottieAnimationView(name: "loading")
+        lottieView.contentMode = .scaleAspectFit
+        lottieView.loopMode = .loop
+        lottieView.frame = lottieHolderView.bounds
+        lottieView.play()
+        
+        self.lottieHolderView.addSubview(lottieView)
+        self.lottieHolderView.isHidden = false
+    }
+    
+    func hideLoading() {
+        self.lottieHolderView.subviews.first?.removeFromSuperview()
+        self.lottieHolderView.isHidden = true
+        
+        tableView.isHidden = false
+    }
 }
 
 

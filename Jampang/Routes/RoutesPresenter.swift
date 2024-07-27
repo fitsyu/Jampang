@@ -34,4 +34,11 @@ extension RoutesPresenter: RoutesPresenterInterface {
     func backButtonTap() {
         wireframe.navigateBack()
     }
+    
+    func viewDidLoad() {
+        interactor.fetchRecommendation { [weak self] ints in
+            self?.view.hideLoading()
+        }
+        view.showLoading()
+    }
 }

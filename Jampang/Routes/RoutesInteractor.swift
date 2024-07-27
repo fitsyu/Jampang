@@ -15,4 +15,9 @@ final class RoutesInteractor {
 // MARK: - Extensions -
 
 extension RoutesInteractor: RoutesInteractorInterface {
+    func fetchRecommendation(completion: (([Int]) -> Void)?) {
+        Timer.scheduledTimer(withTimeInterval: 1, repeats: false, block: { _ in
+            completion?([1,2,3])
+        })
+    }
 }

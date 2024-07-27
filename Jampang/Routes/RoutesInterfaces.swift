@@ -14,14 +14,18 @@ protocol RoutesWireframeInterface: WireframeInterface {
 }
 
 protocol RoutesViewInterface: ViewInterface {
+    func showLoading()
+    func hideLoading()
 }
 
 protocol RoutesPresenterInterface: PresenterInterface {
     func backButtonTap()
+    func viewDidLoad()
 }
 
 protocol RoutesFormatterInterface: FormatterInterface {
 }
 
 protocol RoutesInteractorInterface: InteractorInterface {
+    func fetchRecommendation(completion: (([Int])->Void)?)
 }
