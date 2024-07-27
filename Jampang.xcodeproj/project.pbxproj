@@ -21,6 +21,16 @@
 		E888493E2C55747500590087 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E888493A2C55747500590087 /* HomeViewController.swift */; };
 		E888493F2C55747500590087 /* HomeWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = E888493B2C55747500590087 /* HomeWireframe.swift */; };
 		E88849402C55747500590087 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E88849372C55747500590087 /* Home.storyboard */; };
+		E88849492C559DC000590087 /* Routes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E88849422C559DBF00590087 /* Routes.storyboard */; };
+		E888494A2C559DC000590087 /* RoutesInterfaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88849432C559DBF00590087 /* RoutesInterfaces.swift */; };
+		E888494B2C559DC000590087 /* RoutesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88849442C559DBF00590087 /* RoutesPresenter.swift */; };
+		E888494C2C559DC000590087 /* RoutesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88849452C559DBF00590087 /* RoutesViewController.swift */; };
+		E888494D2C559DC000590087 /* RoutesFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88849462C559DBF00590087 /* RoutesFormatter.swift */; };
+		E888494E2C559DC000590087 /* RoutesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88849472C559DBF00590087 /* RoutesInteractor.swift */; };
+		E888494F2C559DC000590087 /* RoutesWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88849482C559DBF00590087 /* RoutesWireframe.swift */; };
+		E88849522C55AADF00590087 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = E88849512C55AADF00590087 /* Lottie */; };
+		E88849542C55AB7700590087 /* loading.json in Resources */ = {isa = PBXBuildFile; fileRef = E88849532C55AB7700590087 /* loading.json */; };
+		E88849562C55BA0F00590087 /* Recom.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88849552C55BA0F00590087 /* Recom.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +50,15 @@
 		E88849392C55747500590087 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
 		E888493A2C55747500590087 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		E888493B2C55747500590087 /* HomeWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeWireframe.swift; sourceTree = "<group>"; };
+		E88849422C559DBF00590087 /* Routes.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Routes.storyboard; sourceTree = "<group>"; };
+		E88849432C559DBF00590087 /* RoutesInterfaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutesInterfaces.swift; sourceTree = "<group>"; };
+		E88849442C559DBF00590087 /* RoutesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutesPresenter.swift; sourceTree = "<group>"; };
+		E88849452C559DBF00590087 /* RoutesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutesViewController.swift; sourceTree = "<group>"; };
+		E88849462C559DBF00590087 /* RoutesFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutesFormatter.swift; sourceTree = "<group>"; };
+		E88849472C559DBF00590087 /* RoutesInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutesInteractor.swift; sourceTree = "<group>"; };
+		E88849482C559DBF00590087 /* RoutesWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutesWireframe.swift; sourceTree = "<group>"; };
+		E88849532C55AB7700590087 /* loading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loading.json; sourceTree = "<group>"; };
+		E88849552C55BA0F00590087 /* Recom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recom.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E88849522C55AADF00590087 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,12 +92,14 @@
 		E88849142C5571DC00590087 /* Jampang */ = {
 			isa = PBXGroup;
 			children = (
+				E88849412C559D5800590087 /* Routes */,
 				E888492A2C55744500590087 /* Base */,
 				E88849292C55742800590087 /* Home */,
 				E88849152C5571DC00590087 /* AppDelegate.swift */,
 				E888491E2C5571DE00590087 /* Assets.xcassets */,
 				E88849202C5571DE00590087 /* LaunchScreen.storyboard */,
 				E88849232C5571DE00590087 /* Info.plist */,
+				E88849532C55AB7700590087 /* loading.json */,
 			);
 			path = Jampang;
 			sourceTree = "<group>";
@@ -107,6 +129,21 @@
 			path = Base;
 			sourceTree = "<group>";
 		};
+		E88849412C559D5800590087 /* Routes */ = {
+			isa = PBXGroup;
+			children = (
+				E88849422C559DBF00590087 /* Routes.storyboard */,
+				E88849432C559DBF00590087 /* RoutesInterfaces.swift */,
+				E88849442C559DBF00590087 /* RoutesPresenter.swift */,
+				E88849452C559DBF00590087 /* RoutesViewController.swift */,
+				E88849462C559DBF00590087 /* RoutesFormatter.swift */,
+				E88849472C559DBF00590087 /* RoutesInteractor.swift */,
+				E88849482C559DBF00590087 /* RoutesWireframe.swift */,
+				E88849552C55BA0F00590087 /* Recom.swift */,
+			);
+			path = Routes;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -123,6 +160,9 @@
 			dependencies = (
 			);
 			name = Jampang;
+			packageProductDependencies = (
+				E88849512C55AADF00590087 /* Lottie */,
+			);
 			productName = Jampang;
 			productReference = E88849122C5571DC00590087 /* Jampang.app */;
 			productType = "com.apple.product-type.application";
@@ -151,6 +191,9 @@
 				Base,
 			);
 			mainGroup = E88849092C5571DC00590087;
+			packageReferences = (
+				E88849502C55AADF00590087 /* XCRemoteSwiftPackageReference "lottie-spm" */,
+			);
 			productRefGroup = E88849132C5571DC00590087 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -167,7 +210,9 @@
 			files = (
 				E888491F2C5571DE00590087 /* Assets.xcassets in Resources */,
 				E88849222C5571DE00590087 /* Base in Resources */,
+				E88849492C559DC000590087 /* Routes.storyboard in Resources */,
 				E88849402C55747500590087 /* Home.storyboard in Resources */,
+				E88849542C55AB7700590087 /* loading.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -181,9 +226,16 @@
 				E88849312C55745800590087 /* BaseWireframe.swift in Sources */,
 				E88849322C55745800590087 /* FormatterInterface.swift in Sources */,
 				E88849332C55745800590087 /* UIStoryboardExtension.swift in Sources */,
+				E888494A2C559DC000590087 /* RoutesInterfaces.swift in Sources */,
+				E888494B2C559DC000590087 /* RoutesPresenter.swift in Sources */,
+				E888494C2C559DC000590087 /* RoutesViewController.swift in Sources */,
+				E888494D2C559DC000590087 /* RoutesFormatter.swift in Sources */,
+				E888494E2C559DC000590087 /* RoutesInteractor.swift in Sources */,
+				E888494F2C559DC000590087 /* RoutesWireframe.swift in Sources */,
 				E88849342C55745800590087 /* PresenterInterface.swift in Sources */,
 				E88849352C55745800590087 /* ViewInterface.swift in Sources */,
 				E88849362C55745800590087 /* InteractorInterface.swift in Sources */,
+				E88849562C55BA0F00590087 /* Recom.swift in Sources */,
 				E88849162C5571DC00590087 /* AppDelegate.swift in Sources */,
 				E888493C2C55747500590087 /* HomeInterfaces.swift in Sources */,
 				E888493D2C55747500590087 /* HomePresenter.swift in Sources */,
@@ -401,6 +453,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E88849502C55AADF00590087 /* XCRemoteSwiftPackageReference "lottie-spm" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-spm.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.5.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E88849512C55AADF00590087 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E88849502C55AADF00590087 /* XCRemoteSwiftPackageReference "lottie-spm" */;
+			productName = Lottie;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E888490A2C5571DC00590087 /* Project object */;
 }
