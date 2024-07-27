@@ -31,4 +31,7 @@ final class RoutesPresenter {
 // MARK: - Extensions -
 
 extension RoutesPresenter: RoutesPresenterInterface {
+    func backButtonTap() {
+        wireframe.navigateBack()
+    }
 }

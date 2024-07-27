@@ -10,12 +10,14 @@
 import UIKit
 
 protocol RoutesWireframeInterface: WireframeInterface {
+    func navigateBack()
 }
 
 protocol RoutesViewInterface: ViewInterface {
 }
 
 protocol RoutesPresenterInterface: PresenterInterface {
+    func backButtonTap()
 }
 
 protocol RoutesFormatterInterface: FormatterInterface {

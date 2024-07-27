@@ -56,6 +56,10 @@ final class RoutesViewController: UIViewController {
         self.lottieHolderView.subviews.first?.removeFromSuperview()
         self.lottieHolderView.isHidden = true
     }
+    
+    @IBAction func backButtonTap() {
+        presenter.backButtonTap()
+    }
 }
 
 extension RoutesViewController: UITableViewDataSource {

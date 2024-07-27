@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         let window = UIWindow(frame: UIScreen.main.bounds)
 
-        let hw = RoutesWireframe()
+        let hw = HomeWireframe()
         
         window.rootViewController = hw.viewController
         window.makeKeyAndVisible()

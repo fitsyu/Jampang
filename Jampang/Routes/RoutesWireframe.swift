@@ -32,4 +32,7 @@ final class RoutesWireframe: BaseWireframe<RoutesViewController> {
 // MARK: - Extensions -
 
 extension RoutesWireframe: RoutesWireframeInterface {
+    func navigateBack() {
+        self.viewController.dismiss(animated: true)
+    }
 }
