@@ -15,9 +15,23 @@ final class RoutesInteractor {
 // MARK: - Extensions -
 
 extension RoutesInteractor: RoutesInteractorInterface {
-    func fetchRecommendation(completion: (([Int]) -> Void)?) {
-        Timer.scheduledTimer(withTimeInterval: 1, repeats: false, block: { _ in
-            completion?([1,2,3])
-        })
+    func fetchRecommendation(completion: (([Recom]) -> Void)?) {
+        let task = URLSession.shared.dataTask(with: URLRequest(url: URL(string: "https://kmbmicro.co.id/angelhack/vendor/2/recommendation")!)) { data, _, _ in
+            
+            do {
+                let decoder = JSONDecoder()
+                decoder.keyDecodingStrategy = .convertFromSnakeCase
+                let object = try decoder.decode([Recom].self, from: data!)
+                
+                DispatchQueue.main.async {
+                    completion?(object)
+                }
+                
+            } catch {
+                print(error)
+            }
+        }
+        
+        task.resume()
     }
 }

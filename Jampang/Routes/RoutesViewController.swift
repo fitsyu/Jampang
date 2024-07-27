@@ -20,6 +20,8 @@ final class RoutesViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
 
     // MARK: - Lifecycle -
+    
+    private var recoms: [Recom] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,13 +44,19 @@ extension RoutesViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return recoms.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "RouteCell", for: indexPath) as? RouteCell else {
             return UITableViewCell()
         }
+        let recom = recoms[indexPath.row]
+        
+        cell.nameLabel.text = recom.location
+        cell.revenueLabel.text = "Rp \(recom.salesPrediction)"
+        cell.timeRangeLabel.text = recom.timeSlot
+        
         return cell
     }
 }
@@ -74,6 +82,11 @@ extension RoutesViewController: RoutesViewInterface {
         self.lottieHolderView.isHidden = true
         
         tableView.isHidden = false
+    }
+    
+    func showRecoms(recoms: [Recom]) {
+        self.recoms = recoms
+        tableView.reloadSections(IndexSet(integer: 0), with: .automatic)
     }
 }
 

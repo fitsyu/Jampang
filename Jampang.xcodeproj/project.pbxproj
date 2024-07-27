@@ -30,6 +30,7 @@
 		E888494F2C559DC000590087 /* RoutesWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88849482C559DBF00590087 /* RoutesWireframe.swift */; };
 		E88849522C55AADF00590087 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = E88849512C55AADF00590087 /* Lottie */; };
 		E88849542C55AB7700590087 /* loading.json in Resources */ = {isa = PBXBuildFile; fileRef = E88849532C55AB7700590087 /* loading.json */; };
+		E88849562C55BA0F00590087 /* Recom.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88849552C55BA0F00590087 /* Recom.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +58,7 @@
 		E88849472C559DBF00590087 /* RoutesInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutesInteractor.swift; sourceTree = "<group>"; };
 		E88849482C559DBF00590087 /* RoutesWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutesWireframe.swift; sourceTree = "<group>"; };
 		E88849532C55AB7700590087 /* loading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loading.json; sourceTree = "<group>"; };
+		E88849552C55BA0F00590087 /* Recom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recom.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +139,7 @@
 				E88849462C559DBF00590087 /* RoutesFormatter.swift */,
 				E88849472C559DBF00590087 /* RoutesInteractor.swift */,
 				E88849482C559DBF00590087 /* RoutesWireframe.swift */,
+				E88849552C55BA0F00590087 /* Recom.swift */,
 			);
 			path = Routes;
 			sourceTree = "<group>";
@@ -232,6 +235,7 @@
 				E88849342C55745800590087 /* PresenterInterface.swift in Sources */,
 				E88849352C55745800590087 /* ViewInterface.swift in Sources */,
 				E88849362C55745800590087 /* InteractorInterface.swift in Sources */,
+				E88849562C55BA0F00590087 /* Recom.swift in Sources */,
 				E88849162C5571DC00590087 /* AppDelegate.swift in Sources */,
 				E888493C2C55747500590087 /* HomeInterfaces.swift in Sources */,
 				E888493D2C55747500590087 /* HomePresenter.swift in Sources */,

@@ -16,6 +16,7 @@ protocol RoutesWireframeInterface: WireframeInterface {
 protocol RoutesViewInterface: ViewInterface {
     func showLoading()
     func hideLoading()
+    func showRecoms(recoms: [Recom])
 }
 
 protocol RoutesPresenterInterface: PresenterInterface {
@@ -27,5 +28,5 @@ protocol RoutesFormatterInterface: FormatterInterface {
 }
 
 protocol RoutesInteractorInterface: InteractorInterface {
-    func fetchRecommendation(completion: (([Int])->Void)?)
+    func fetchRecommendation(completion: (([Recom])->Void)?)
 }

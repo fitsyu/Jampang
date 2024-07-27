@@ -36,8 +36,9 @@ extension RoutesPresenter: RoutesPresenterInterface {
     }
     
     func viewDidLoad() {
-        interactor.fetchRecommendation { [weak self] ints in
+        interactor.fetchRecommendation { [weak self] recoms in
             self?.view.hideLoading()
+            self?.view.showRecoms(recoms: recoms)
         }
         view.showLoading()
     }
