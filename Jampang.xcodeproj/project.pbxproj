@@ -28,6 +28,8 @@
 		E888494D2C559DC000590087 /* RoutesFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88849462C559DBF00590087 /* RoutesFormatter.swift */; };
 		E888494E2C559DC000590087 /* RoutesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88849472C559DBF00590087 /* RoutesInteractor.swift */; };
 		E888494F2C559DC000590087 /* RoutesWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88849482C559DBF00590087 /* RoutesWireframe.swift */; };
+		E88849522C55AADF00590087 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = E88849512C55AADF00590087 /* Lottie */; };
+		E88849542C55AB7700590087 /* loading.json in Resources */ = {isa = PBXBuildFile; fileRef = E88849532C55AB7700590087 /* loading.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +56,7 @@
 		E88849462C559DBF00590087 /* RoutesFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutesFormatter.swift; sourceTree = "<group>"; };
 		E88849472C559DBF00590087 /* RoutesInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutesInteractor.swift; sourceTree = "<group>"; };
 		E88849482C559DBF00590087 /* RoutesWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutesWireframe.swift; sourceTree = "<group>"; };
+		E88849532C55AB7700590087 /* loading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loading.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E88849522C55AADF00590087 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,6 +97,7 @@
 				E888491E2C5571DE00590087 /* Assets.xcassets */,
 				E88849202C5571DE00590087 /* LaunchScreen.storyboard */,
 				E88849232C5571DE00590087 /* Info.plist */,
+				E88849532C55AB7700590087 /* loading.json */,
 			);
 			path = Jampang;
 			sourceTree = "<group>";
@@ -152,6 +157,9 @@
 			dependencies = (
 			);
 			name = Jampang;
+			packageProductDependencies = (
+				E88849512C55AADF00590087 /* Lottie */,
+			);
 			productName = Jampang;
 			productReference = E88849122C5571DC00590087 /* Jampang.app */;
 			productType = "com.apple.product-type.application";
@@ -180,6 +188,9 @@
 				Base,
 			);
 			mainGroup = E88849092C5571DC00590087;
+			packageReferences = (
+				E88849502C55AADF00590087 /* XCRemoteSwiftPackageReference "lottie-spm" */,
+			);
 			productRefGroup = E88849132C5571DC00590087 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -198,6 +209,7 @@
 				E88849222C5571DE00590087 /* Base in Resources */,
 				E88849492C559DC000590087 /* Routes.storyboard in Resources */,
 				E88849402C55747500590087 /* Home.storyboard in Resources */,
+				E88849542C55AB7700590087 /* loading.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -437,6 +449,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E88849502C55AADF00590087 /* XCRemoteSwiftPackageReference "lottie-spm" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-spm.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.5.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E88849512C55AADF00590087 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E88849502C55AADF00590087 /* XCRemoteSwiftPackageReference "lottie-spm" */;
+			productName = Lottie;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E888490A2C5571DC00590087 /* Project object */;
 }
