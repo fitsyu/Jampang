@@ -35,4 +35,9 @@ extension RoutesWireframe: RoutesWireframeInterface {
     func navigateBack() {
         self.viewController.dismiss(animated: true)
     }
+    
+    func navigateToMap(recom: Recom) {
+        guard let url = URL(string: "http://maps.apple.com/?daddr=\(recom.lat),\(recom.lng)&dirflg=w") else { return }
+        UIApplication.shared.open(url)
+    }
 }

@@ -29,6 +29,7 @@ final class RoutesViewController: UIViewController {
         tableView.register(RouteCell.self, forCellReuseIdentifier: "RouteCell")
         tableView.rowHeight = 104 + 16
         tableView.dataSource = self
+        tableView.delegate = self
         
         presenter.viewDidLoad()
     }
@@ -58,6 +59,13 @@ extension RoutesViewController: UITableViewDataSource {
         cell.timeRangeLabel.text = recom.timeSlot
         
         return cell
+    }
+}
+
+extension RoutesViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let recom = self.recoms[indexPath.row]
+        presenter.didSelectRecom(recom: recom)
     }
 }
 
