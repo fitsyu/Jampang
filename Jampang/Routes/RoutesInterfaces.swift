@@ -11,6 +11,7 @@ import UIKit
 
 protocol RoutesWireframeInterface: WireframeInterface {
     func navigateBack()
+    func navigateToMap(recom: Recom)
 }
 
 protocol RoutesViewInterface: ViewInterface {
@@ -22,6 +23,7 @@ protocol RoutesViewInterface: ViewInterface {
 protocol RoutesPresenterInterface: PresenterInterface {
     func backButtonTap()
     func viewDidLoad()
+    func didSelectRecom(recom: Recom)
 }
 
 protocol RoutesFormatterInterface: FormatterInterface {

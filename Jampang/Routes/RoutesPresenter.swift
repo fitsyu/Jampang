@@ -42,4 +42,8 @@ extension RoutesPresenter: RoutesPresenterInterface {
         }
         view.showLoading()
     }
+    
+    func didSelectRecom(recom: Recom) {
+        wireframe.navigateToMap(recom: recom)
+    }
 }
