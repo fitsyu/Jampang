@@ -18,10 +18,14 @@ final class RoutesViewController: UIViewController {
     
     @IBOutlet weak var lottieHolderView: UIView!
     @IBOutlet weak var tableView: UITableView!
+    
+    @IBOutlet weak var aiMsgView: UIView!
+    @IBOutlet weak var aiMsgLabel: UILabel!
 
     // MARK: - Lifecycle -
     
     private var recoms: [Recom] = []
+    var selectedRecom: Recom?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,11 +35,27 @@ final class RoutesViewController: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
         
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.aiMessageTap))
+        aiMsgView.addGestureRecognizer(tapGesture)
+        
+        aiMsgView.layer.shadowColor = UIColor.gray.cgColor
+        aiMsgView.layer.shadowOpacity = 0.6
+        aiMsgView.layer.shadowOffset = .zero
+        aiMsgView.layer.shadowRadius = 12
+        aiMsgView.layer.cornerRadius = 12
+        aiMsgView.isHidden = true
+        
         presenter.viewDidLoad()
     }
     
     @IBAction func backButtonTap() {
         presenter.backButtonTap()
+    }
+    
+    @objc func aiMessageTap() {
+        if let recom = self.selectedRecom {
+            presenter.didSelectRecom(recom: recom)
+        }
     }
 }
 
@@ -65,7 +85,9 @@ extension RoutesViewController: UITableViewDataSource {
 extension RoutesViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let recom = self.recoms[indexPath.row]
-        presenter.didSelectRecom(recom: recom)
+        aiMsgLabel.text = recom.recommendation
+        aiMsgView.isHidden = false
+        self.selectedRecom = recom
     }
 }
 
@@ -191,6 +213,6 @@ class RouteCell: UITableViewCell {
             timeRangeLabel.topAnchor.constraint(equalTo: key2Label.bottomAnchor, constant: 4)
         ])
         
-    
+        self.selectionStyle = .none
     }
 }
